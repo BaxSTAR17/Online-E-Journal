@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BAO-AS, Online E-Journal</title>
+    <style>
+        body {
+            overflow: hidden;
+            background: cornflowerblue;
+            margin: auto;
+            font-family: Tahoma Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        }
+        .mainwrap {
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+            background: linear-gradient(217deg, rgb(12, 12, 75), rgba(255,0,0,0) 70.71%),
+                        linear-gradient(127deg, rgb(89, 2, 89), rgba(0,255,0,0) 70.71%),
+                        linear-gradient(336deg, rgb(47, 10, 110), rgba(0,0,255,0) 70.71%);
+            transition: all 0.5s ease-in-out;
+            z-index: 1;
+            opacity: 1;
+            display: flex;
+            justify-content: center;
+        }
+        .bgchurch::before {
+            position: absolute;
+            content: "";
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: linear-gradient(217deg, orange, rgba(255,0,0,0) 70.71%),
+                        linear-gradient(127deg, goldenrod, rgba(0,255,0,0) 70.71%),
+                        linear-gradient(336deg, rgb(255, 40, 76), rgba(0,0,255,0) 70.71%);
+            z-index: -1;
+            transition: opacity 0.3s linear;
+            opacity: 0;
+        }
+        .bgchurch::after {
+            position: absolute;
+            content: "CHURCH";
+            top: 3dvh;
+            left: 1dvw;
+            font-family: Tahoma;
+            font-weight: 700;
+            color: white;
+            font-size:100px;
+            opacity: 0;
+            transition: opacity 0.2s linear;
+        }
+
+        .bgclassroom::before {
+            position: absolute;
+            content: "";
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: linear-gradient(217deg, darkgreen, rgba(255,0,0,0) 70.71%),
+                        linear-gradient(127deg, rgb(255, 223, 141), rgba(0,255,0,0) 70.71%),
+                        linear-gradient(336deg, rgb(144, 187, 96), rgba(0,0,255,0) 70.71%);
+            z-index: -1;
+            transition: opacity 0.3s linear;
+            opacity: 0;
+        }
+        .bgclassroom::after {
+            position: absolute;
+            content: "CLASSROOM";
+            top: 70dvh;
+            left: 0;
+            font-family: Tahoma;
+            font-weight: 700;
+            color: white;
+            font-size:100px;
+            opacity: 0;
+            transition: opacity 0.2s linear;
+        }
+
+        .bgcommunity::before {
+            position: absolute;
+            content: "";
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: linear-gradient(217deg, blue, rgba(255,0,0,0) 70.71%),
+                        linear-gradient(127deg, rgb(52, 212, 233), rgba(0,255,0,0) 70.71%),
+                        linear-gradient(336deg, rgb(238, 164, 205), rgba(0,0,255,0) 70.71%);
+            z-index: -1;
+            transition: opacity 0.3s linear;
+            opacity: 0;
+        }
+        .bgcommunity::after {
+            position: absolute;
+            content: "COMMUNITY";
+            top: 70dvh;
+            left: 55dvw;
+            font-family: Tahoma;
+            font-weight: 700;
+            color: white;
+            font-size:100px;
+            opacity: 0;
+            transition: opacity 0.2s linear;
+        }
+
+        .bgculture::before {
+            position: absolute;
+            content: "";
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: linear-gradient(217deg, red, rgba(255,0,0,0) 70.71%),
+                        linear-gradient(127deg, blue, rgba(0,255,0,0) 70.71%),
+                        linear-gradient(336deg, green, rgba(0,0,255,0) 70.71%);
+            z-index: -1;
+            transition: opacity 0.3s linear;
+            opacity: 0;
+        }
+        .bgculture::after {
+            position: absolute;
+            content: "CULTURE";
+            top: 70dvh;
+            left: 35dvw;
+            font-family: Tahoma;
+            font-weight: 700;
+            color: white;
+            font-size:100px;
+            opacity: 0;
+            transition: opacity 0.2s linear;
+        }
+
+        .bgcourt::before {
+            position: absolute;
+            content: "";
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: linear-gradient(217deg, rgb(7, 238, 173), rgba(5, 255, 138, 0) 70.71%),
+                        linear-gradient(127deg, rgb(23, 160, 144), rgba(0,255,0,0) 70.71%),
+                        linear-gradient(336deg, rgb(0, 255, 17), rgba(0,0,255,0) 70.71%);
+            z-index: -1;
+            transition: opacity 0.3s linear;
+            opacity: 0;
+        }
+        .bgcourt::after {
+            position: absolute;
+            content: "COURT";
+            top: 3dvh;
+            left: 75dvw;
+            font-family: Tahoma;
+            font-weight: 700;
+            color: white;
+            font-size:100px;
+            opacity: 0;
+            transition: opacity 0.2s linear;
+        }
+        .btnwrap {
+            position: absolute;
+            border: 1px solid white;
+            border-radius: 30px;
+            width: 600px;
+            height: 100px;
+            align-self: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+            background: linear-gradient(217deg, rgba(0,217,217,.8), rgba(255,0,0,0) 70.71%),
+                        linear-gradient(127deg, rgba(217,217,0,.8), rgba(0,255,0,0) 70.71%),
+                        linear-gradient(336deg, rgba(217,0,217,.8), rgba(0,0,255,0) 70.71%);
+        }
+        .btnwrap > button {
+            height: 50px;
+            width: 100px;
+            background: transparent;
+            border: 1px solid white;
+            border-radius: 20px;
+            transition: all 0.3s ease-in-out;
+            color: white;
+        }
+        .btnwrap > button:hover {
+            border-color: rgba(0, 0, 0, 0);
+            background-color: white;
+        }
+        .bchurch:hover {
+            color: darkgoldenrod;
+        }
+        .bclassroom:hover {
+            color: darkseagreen;
+        }
+        .bculture:hover {
+            color: darkgreen;
+        }
+        .bcommunity:hover {
+            color: darkslateblue;
+        }
+        .bcourt:hover {
+            color: darkcyan;
+        }
+        .p1 {
+            position: absolute;
+            height: 250px;
+            width: 250px;
+            border-radius: 20px;
+            border: 2px solid white;
+            top: 5dvh;
+        }
+        .p2 {
+            position: absolute;
+            height: 225px;
+            width: 225px;
+            border: 2px solid white;
+            border-radius: 20px;
+            top: 60dvh;
+            left: 15dvw;
+        }
+        .tbox1 {
+            position: absolute;
+            height: 170px;
+            width: 500px;
+            border: 2px solid white;
+            top: 68dvh;
+        }
+        .tbox2 {
+            position: absolute;
+            height: 190px;
+            width: 200px;
+            border: 2px solid white;
+            top: 65dvh;
+            left: 70dvw;
+        }
+        .lbox1 {
+            position: absolute;
+            height: 20px;
+            width: 200px;
+            border: 2px solid black;
+            top: 93dvh;
+        }
+        .lbox2 {
+            position: absolute;
+            height: 20px;
+            width: 400px;
+            border: 2px solid black;
+            top: 64dvh;
+        }
+        .btnbox {
+            position: absolute;
+            height: 25px;
+            width: 90px;
+            border: 2px solid white;
+            background: linear-gradient(217deg, rgba(7, 85, 85, 0.8), rgba(255,0,0,0) 70.71%),
+                        linear-gradient(127deg, rgba(99, 99, 18, 0.8), rgba(0,255,0,0) 70.71%),
+                        linear-gradient(336deg, rgba(120, 14, 120, 0.8), rgba(0,0,255,0) 70.71%);
+            top: 57dvh;
+            border-radius: 25px;
+            color: white;
+            text-align: center;
+            font-size: 18px;
+            font-family: tahoma;
+            font-weight: 550;
+        }
+        .btnbox:hover {
+            border-color: rgb(47, 10, 110);
+            background-color: white;
+            color: rgb(47, 10, 110);
+            transition: all 0.2s ease-in-out;
+        }
+        .mainwrap > div {
+            transition: all 0.2s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+    <div class="mainwrap">
+        <div class="bgchurch"></div>
+        <div class="bgclassroom"></div>
+        <div class="bgcommunity"></div>
+        <div class="bgculture"></div>
+        <div class="bgcourt"></div>
+        <div class="trans2"></div>
+        <div class="trans1"></div>
+        <div class="p1"></div>
+        <div class="p2"></div>
+        <div class="lbox1"></div>
+        <div class="lbox2"></div>
+        <div class="tbox1"></div>
+        <div class="tbox2"></div>
+        <div class="btnbox">ABOUT</div>
+        <div class="btnwrap">
+            <button class="bchurch"><b>CHURCH</b></button>
+            <button class="bclassroom"><b>CLASSROOM</b></button>
+            <button class="bculture"><b>CULTURE</b></button>
+            <button class="bcommunity"><b>COMMUNITY</b></button>
+            <button class="bcourt"><b>COURT</b></button>
+        </div>
+    </div>
+</body>
+<script>
+    let bchurch = document.querySelector(".bchurch");
+    let church = document.querySelector("church");
+    let bclassroom = document.querySelector(".bclassroom");
+    let bcommunity = document.querySelector(".bcommunity");
+    let bculture = document.querySelector(".bculture");
+    let bcourt = document.querySelector(".bcourt");
+    let btnwrapper = document.querySelector(".btnwrap");
+    let wrapper = document.querySelector(".mainwrap");
+    let p1 = document.querySelector(".p1");
+    let p2 = document.querySelector(".p2");
+    let tbox1 = document.querySelector(".tbox1");
+    let tbox2 = document.querySelector(".tbox2");
+    let lbox1 = document.querySelector(".lbox1");
+    let lbox2 = document.querySelector(".lbox2");
+    let bbox = document.querySelector(".btnbox");
+    let styler = document.head.appendChild(document.createElement("style"));
+
+    bchurch.addEventListener("click", function() {styler.innerHTML = ".bgchurch::before { opacity: 1; } .bgchurch::after { opacity: 1; } .p1 { transform: translate(40dvw, 0); } .p2 { transform: translate(-5dvw, 0); } .tbox1 { transform: translate(-2dvw, -58dvh); width: 550px; } .tbox2 { transform: translate(-3dvw, -57dvh); width: 200px; } .lbox1 { width: 200px; transform: translate(0, -23dvh); } .lbox2 { width: 200px; transform: translate(-15dvw, 6dvh); }"; bbox.textContent = "GO BACK";});
+    bbox.addEventListener("click", function() {styler.innerHTML = ".bgchurch::before { opacity: 0; } .bgclassroom::before { opacity: 0; } .bgcommunity::before { opacity: 0; } .bgculture::before { opacity: 0; } .bgcourt::before { opacity: 0; }"; bbox.textContent = "ABOUT";});
+    bclassroom.addEventListener("click", function() {styler.innerHTML = ".bgclassroom::before { opacity: 1; } .bgclassroom::after { opacity: 1; } .p1 { transform: translate(35dvw, 54dvh); } .p2 { transform: translate(-5dvw, -52dvh); } .tbox1 { transform: translate(8dvw, -1dvh); } .tbox2 { width: 600px; transform: translate(-42dvw, -53dvh); } .lbox1 { width: 210px; transform: translate(15dvw, -30dvh); } .lbox2 { width: 210px; transform: translate(-1dvw, -1dvh);}"; bbox.textContent = "GO BACK"});
+    bcommunity.addEventListener("click", function() {styler.innerHTML = ".bgcommunity::before { opacity: 1; } .bgcommunity::after { opacity: 1; } .p1 { transform: translate(-40dvw, 0); } .p2 { transform: translate(-13dvw, 0);} .tbox1 { transform: translate(-12dvw, -1dvh); width: 400px; } .tbox2 { transform: translate(-45dvw, -53dvh); width: 400px; } .lbox1 { width: 150px; transform: translate(-20dvw, -88dvh); } .lbox2 { width: 150px; transform: translate(-20dvw, -5dvh); }"; bbox.textContent = "GO BACK"});
+    bculture.addEventListener("click", function() {styler.innerHTML = ".bgculture::before { opacity: 1; } .bgculture::after { opacity: 1; } .p1 { transform: translate(29dvw, 54dvh); } .tbox1 { width: 650px; transform: translate(0, -60dvh); } .tbox2 { width: 300px; transform: translate(4dvw, -57dvh);} .lbox1 { width: 300px; transform: translate(-35dvw, -80dvh); } .lbox2 { width: 300px; transform: translate(-35dvw, -40dvh);}"; bbox.textContent = "GO BACK"});
+    bcourt.addEventListener("click", function() {styler.innerHTML = ".bgcourt::before { opacity: 1; } .bgcourt::after { opacity: 1; } .p2 { transform: translate(27dvw, 0); } .tbox1 { width: 400px; transform: translate(-30dvw, -3dvh); } .tbox2 { width: 400px; transform: translate(-63dvw, -55dvh); } .lbox1 { width: 300px; transform: translate(20dvw, -23dvh); } .lbox2 { width: 600px; transform: translate(29dvw, 10dvh);}"; bbox.textContent = "GO BACK"});
+</script>
+</html>

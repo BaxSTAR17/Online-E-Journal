@@ -24,19 +24,23 @@
         }
         .building {
             top: calc(100vh - 900px);
+            height: 130dvh;
         }
         .land {
-            right: calc(100vw - 800px);
+            right: calc(100vw - 65dvw);
             top: calc(100vh - 300px);
+            width: 65dvw;
         }
         .wheel {
             right: calc(100vw - 1100px);
             transform-origin: 460px 465px;
             animation: rotate 10s infinite linear;
+            height: 130dvh;
         }
         .tree {
             left: calc(100vh - 900px);
             bottom: 10dvh;
+            height: 100dvh;
         }
         @keyframes rotate {
             0% {
@@ -59,10 +63,10 @@
 </head>
 <body>
     <div class="mainwrap">
-        <img src="./images/church wheel.png" alt="" class="wheel" height="900px" width="900px">
-        <img src="./images/church tree.png" alt="" class="tree" height="700px" width="600px">
-        <img src="./images/church building.png" alt="church building" class="building" height="900px">
-        <img src="./images/church land.png" alt="" class="land" height="500px" width="800px">
+        <img src="./images/church wheel.png" alt="" class="wheel">
+        <img src="./images/church tree.png" alt="" class="tree">
+        <img src="./images/church building.png" alt="church building" class="building">
+        <img src="./images/church land.png" alt="" class="land">
         <!-- <img src="./images/church cross.png" alt="" class="building">
         <img src="./images/church streetlight.png" alt="" class="building"> -->
     </div>

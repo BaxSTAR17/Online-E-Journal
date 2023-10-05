@@ -24,6 +24,7 @@
             display: flex;
             justify-content: center;
         }
+        
         .bgchurch::before {
             position: absolute;
             content: "";
@@ -186,21 +187,8 @@
         .btnwrap > button:hover {
             border-color: rgba(0, 0, 0, 0);
             background-color: white;
-        }
-        .bchurch:hover {
-            color: darkgoldenrod;
-        }
-        .bclassroom:hover {
-            color: darkseagreen;
-        }
-        .bculture:hover {
-            color: darkgreen;
-        }
-        .bcommunity:hover {
-            color: darkslateblue;
-        }
-        .bcourt:hover {
-            color: darkcyan;
+            scale: 1.15;
+            color: var(--color);
         }
         .p1 {
             position: absolute;
@@ -269,6 +257,7 @@
             border-color: rgb(47, 10, 110);
             background-color: white;
             color: rgb(47, 10, 110);
+            scale: 1.15;
             transition: all 0.2s ease-in-out;
         }
         .mainwrap > div {
@@ -320,38 +309,14 @@
         <div class="tbox2"></div>
         <div class="btnbox">ABOUT</div>
         <div class="btnwrap">
-            <button class="bchurch"><b>CHURCH</b></button>
-            <button class="bclassroom"><b>CLASSROOM</b></button>
-            <button class="bculture"><b>CULTURE</b></button>
-            <button class="bcommunity"><b>COMMUNITY</b></button>
-            <button class="bcourt"><b>COURT</b></button>
+            <button class="bchurch" style="--color: darkgoldenrod;"><b>CHURCH</b></button>
+            <button class="bclassroom" style="--color: darkseagreen;"><b>CLASSROOM</b></button>
+            <button class="bculture" style="--color: darkgreen;"><b>CULTURE</b></button>
+            <button class="bcommunity" style="--color: darkslateblue;"><b>COMMUNITY</b></button>
+            <button class="bcourt" style="--color: darkcyan;"><b>COURT</b></button>
         </div>
         <a href="./church/index.htm" class="gochurch">GO</a>
     </div>
 </body>
-<script>
-    let bchurch = document.querySelector(".bchurch");
-    let church = document.querySelector("church");
-    let bclassroom = document.querySelector(".bclassroom");
-    let bcommunity = document.querySelector(".bcommunity");
-    let bculture = document.querySelector(".bculture");
-    let bcourt = document.querySelector(".bcourt");
-    let btnwrapper = document.querySelector(".btnwrap");
-    let wrapper = document.querySelector(".mainwrap");
-    let p1 = document.querySelector(".p1");
-    let p2 = document.querySelector(".p2");
-    let tbox1 = document.querySelector(".tbox1");
-    let tbox2 = document.querySelector(".tbox2");
-    let lbox1 = document.querySelector(".lbox1");
-    let lbox2 = document.querySelector(".lbox2");
-    let bbox = document.querySelector(".btnbox");
-    let styler = document.head.appendChild(document.createElement("style"));
-
-    bchurch.addEventListener("click", function() {styler.innerHTML = ".bgchurch::before { opacity: 1; } .bgchurch::after { opacity: 1; } .p1 { transform: translate(40dvw, 0); } .p2 { transform: translate(-5dvw, 0); } .tbox1 { transform: translate(-2dvw, -58dvh); width: 550px; } .tbox2 { transform: translate(-3dvw, -57dvh); width: 200px; } .lbox1 { width: 200px; transform: translate(0, -23dvh); } .lbox2 { width: 200px; transform: translate(-15dvw, 6dvh); } .gochurch { visibility: visible; opacity: 1;}"; bbox.textContent = "GO BACK";});
-    bbox.addEventListener("click", function() {styler.innerHTML = ".bgchurch::before { opacity: 0; } .bgclassroom::before { opacity: 0; } .bgcommunity::before { opacity: 0; } .bgculture::before { opacity: 0; } .bgcourt::before { opacity: 0; }"; bbox.textContent = "ABOUT";});
-    bclassroom.addEventListener("click", function() {styler.innerHTML = ".bgclassroom::before { opacity: 1; } .bgclassroom::after { opacity: 1; } .p1 { transform: translate(35dvw, 54dvh); } .p2 { transform: translate(-5dvw, -52dvh); } .tbox1 { transform: translate(8dvw, -1dvh); } .tbox2 { width: 600px; transform: translate(-42dvw, -53dvh); } .lbox1 { width: 210px; transform: translate(15dvw, -30dvh); } .lbox2 { width: 210px; transform: translate(-1dvw, -1dvh);}"; bbox.textContent = "GO BACK"});
-    bcommunity.addEventListener("click", function() {styler.innerHTML = ".bgcommunity::before { opacity: 1; } .bgcommunity::after { opacity: 1; } .p1 { transform: translate(-40dvw, 0); } .p2 { transform: translate(-13dvw, 0);} .tbox1 { transform: translate(-12dvw, -1dvh); width: 400px; } .tbox2 { transform: translate(-45dvw, -53dvh); width: 400px; } .lbox1 { width: 150px; transform: translate(-20dvw, -88dvh); } .lbox2 { width: 150px; transform: translate(-20dvw, -5dvh); }"; bbox.textContent = "GO BACK"});
-    bculture.addEventListener("click", function() {styler.innerHTML = ".bgculture::before { opacity: 1; } .bgculture::after { opacity: 1; } .p1 { transform: translate(29dvw, 54dvh); } .tbox1 { width: 650px; transform: translate(0, -60dvh); } .tbox2 { width: 300px; transform: translate(4dvw, -57dvh);} .lbox1 { width: 300px; transform: translate(-35dvw, -80dvh); } .lbox2 { width: 300px; transform: translate(-35dvw, -40dvh);}"; bbox.textContent = "GO BACK"});
-    bcourt.addEventListener("click", function() {styler.innerHTML = ".bgcourt::before { opacity: 1; } .bgcourt::after { opacity: 1; } .p2 { transform: translate(27dvw, 0); } .tbox1 { width: 400px; transform: translate(-30dvw, -3dvh); } .tbox2 { width: 400px; transform: translate(-63dvw, -55dvh); } .lbox1 { width: 300px; transform: translate(20dvw, -23dvh); } .lbox2 { width: 600px; transform: translate(29dvw, 10dvh);}"; bbox.textContent = "GO BACK"});
-</script>
+<script src="scripter.js"></script>
 </html>

@@ -215,6 +215,34 @@
             animation-delay: calc(var(--layer) * 120ms);
             opacity: 0;
         }
+        .backbtn {
+            --layer: 15;
+            animation: popup 2s ease-in-out forwards;
+            animation-delay: calc(var(--layer) * 120ms);
+            position: absolute;
+            opacity: 0;
+            top: 1dvh;
+            right: 90dvw;
+            height: 25px;
+            width: 90px;
+            border: 2px solid white;
+            background: linear-gradient(217deg, rgba(7, 85, 85, 0.8), rgba(255,0,0,0) 70.71%),
+                        linear-gradient(127deg, rgba(99, 99, 18, 0.8), rgba(0,255,0,0) 70.71%),
+                        linear-gradient(336deg, rgba(120, 14, 120, 0.8), rgba(0,0,255,0) 70.71%);
+            border-radius: 25px;
+            color: white;
+            text-align: center;
+            font-size: 18px;
+            font-family: tahoma;
+            font-weight: 550;
+            text-decoration: none;
+            transition: all 0.2s ease-in-out
+        }
+        .backbtn:hover {
+            scale: 1.54;
+            border-color: yellow;
+            color: yellow;
+        }
         @keyframes popupfade {
             0% {
                 opacity: 0;
@@ -224,6 +252,12 @@
                 transform: translateY(0vh);
                 background-color: rgba(calc(var(--rval) * 15), calc(var(--gval) * 15), calc(var(--bval) * 15), 0.6);
             }
+        }
+        .label {
+            position: absolute;
+            top: 35dvh;
+            right: 25dvw;
+            scale: 1.7;
         }
     </style>
 </head>
@@ -249,6 +283,7 @@
         <input type="radio" name="dot" id="entry7">
         <input type="radio" name="dot" id="entry8">
         <!--their buttons-->
+        <label for="" class="label">ENTRIES:</label>
         <label for="entry1" class="btn" id="one" style="--lineup: 1">1</label>
         <label for="entry2" class="btn" id="two" style="--lineup: 2">2</label>
         <label for="entry3" class="btn" id="three" style="--lineup: 3">3</label>
@@ -266,6 +301,10 @@
         <div class="card six" style="--rval: 11; --gval: 12; --bval: 3;"></div>
         <div class="card seven" style="--rval: 8; --gval: 4; --bval: 2;"></div>
         <div class="card eight" style="--rval: 5; --gval: 10; --bval: 15;"></div>
+        <!--go back-->
+        <a href="../index.html">
+            <div class="backbtn">GO BACK</div>
+        </a>
     </section>
 </body>
 </html>

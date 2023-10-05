@@ -19,8 +19,21 @@
             width: 100vw;
             overflow: hidden;
         }
-        .mainwrap > img {
+        .mainwrap > img.land, img.tree, img.building, img.cross, img.light {
             position: absolute;
+            animation: popup 1s ease-in-out forwards;
+            animation-delay: calc(var(--layer) * 120ms);
+            opacity: 0;
+        }
+        @keyframes popup {
+            from {
+                transform: translateY(200vh);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0vh);
+                opacity: 1;
+            }
         }
         .building {
             top: -30dvh;
@@ -32,8 +45,7 @@
             width: 65dvw;
         }
         .wheel {
-            right: 30vw;
-            transform-origin: 30dvw 66dvh;
+            transform-origin: 30dvw 65dvh;
             animation: rotate 10s infinite linear;
             height: 130dvh;
         }
@@ -55,21 +67,205 @@
             width: 20px;
             background-color: black;
             position: absolute;
-            left: 39dvw;
-            top: 66dvh;
+            left: calc(500px + 30vw);
+            top: 70dvh;
         } */
-
+        .cross {
+            width: 15dvw;
+            height: 60dvh;
+            right: 70dvw;
+            top: 50dvh;       
+        }
+        .light {
+            height: 60dvh;
+            top: 50dvh;
+            right: 5dvw;
+        }
+        .cycle {
+            height: 3000px;
+            width: 3000px;
+            left: -65dvw;
+            top: -55dvh;
+            position: absolute;
+            background: linear-gradient(rgb(1, 1, 70), goldenrod);
+            border-radius: 200%;
+            animation: dayNight 20s infinite linear;
+        }
+        @keyframes dayNight {
+            0% {
+                rotate: 0turn;
+            }
+            100% {
+                rotate: 1turn;
+            }    
+        }
+        .btn {
+            position: absolute;
+            height: 30px;
+            width: 30px;
+            border-radius: 30px;
+            background-color: navy;
+            border-style: outset;
+            border-color: white;
+            right: 100px;
+            right: calc(100px * var(--lineup));
+            align-self: center;
+            cursor: pointer;
+            transition: all 0.3s ease-out;
+        }
+        .mainwrap > #entry1:checked ~ #one{
+            background-color: gold;
+            color: black;
+        }
+        .mainwrap > #entry2:checked ~ #two{
+            background-color: gold;
+            color: black;
+        }
+        .mainwrap > #entry3:checked ~ #three{
+            background-color: gold;
+            color: black;
+        }
+        .mainwrap > #entry4:checked ~ #four{
+            background-color: gold;
+            color: black;
+        }
+        .mainwrap > #entry5:checked ~ #five{
+            background-color: gold;
+            color: black;
+        }
+        .mainwrap > #entry6:checked ~ #six{
+            background-color: gold;
+            color: black;
+        }
+        .mainwrap > #entry7:checked ~ #seven{
+            background-color: gold;
+            color: black;
+        }
+        .mainwrap > #entry8:checked ~ #eight{
+            background-color: gold;
+            color: black;
+        }
+        .card {
+            /* background-color: rgba(calc(var(--rval) * 15), calc(var(--gval) * 15), calc(var(--bval) * 15), 0.6); */
+            color: var(--color);
+            width: 600px;
+            height: 600px;
+            align-self: center;
+            left: 60px;
+            position: absolute;
+            border-radius: 20px;
+            opacity: 0;
+            transition: all 0.2s ease-in-out;
+        }
+        #entry1:checked ~ .one {
+            opacity: 1;
+        }
+        #entry2:checked ~ .two {
+            opacity: 1;
+        }
+        #entry3:checked ~ .three {
+            opacity: 1;
+        }
+        #entry4:checked ~ .four {
+            opacity: 1;
+        }
+        #entry5:checked ~ .five {
+            opacity: 1;
+        }
+        #entry6:checked ~ .six {
+            opacity: 1;
+        }
+        #entry7:checked ~ .seven {
+            opacity: 1;
+        }
+        #entry8:checked ~ .eight {
+            opacity: 1;
+        }
+        .wheelcon {
+            position: absolute;
+            right: 30vw;
+            animation: slidein 2s ease-in-out forwards;
+            animation-delay: 10ms;
+            opacity: 0;
+        }
+        @keyframes slidein {
+            from {
+                transform: translateX(200vw);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0vw);
+                opacity: 1;
+            }
+        }
+        .mainwrap > label {
+            --layer: 15;
+            animation: popup 2s ease-in-out forwards;
+            animation-delay: calc(var(--layer) * 120ms);
+            opacity: 0;
+            color: white;
+            text-align: center;
+            font-weight: bold;
+            font-size: 25px;
+            font-family: Tahoma;
+        }
+        .mainwrap > .card {
+            --layer: 15;
+            animation: popupfade 2s ease-in-out forwards;
+            animation-delay: calc(var(--layer) * 120ms);
+            opacity: 0;
+        }
+        @keyframes popupfade {
+            0% {
+                opacity: 0;
+                transform: translateY(200vh);
+            }
+            100% {
+                transform: translateY(0vh);
+                background-color: rgba(calc(var(--rval) * 15), calc(var(--gval) * 15), calc(var(--bval) * 15), 0.6);
+            }
+        }
     </style>
 </head>
 <body>
-    <div class="mainwrap">
-        <img src="./images/church wheel.png" alt="" class="wheel">
-        <!-- <div class="test"></div> -->
-        <img src="./images/church tree.png" alt="" class="tree">
-        <img src="./images/church building.png" alt="church building" class="building">
-        <img src="./images/church land.png" alt="" class="land">
-        <!-- <img src="./images/church cross.png" alt="" class="building">
-        <img src="./images/church streetlight.png" alt="" class="building"> -->
-    </div>
+    <section class="mainwrap">
+        <!-- !!daynight-cycle-->
+        <div class="cycle"></div>
+        <!-- !!buildings-->
+        <div class="wheelcon"><img src="./images/church wheel.png" alt="" class="wheel" style="--layer: 5;"></div>
+            <!-- <div class="test"></div> -->
+        <img src="./images/church tree.png" alt="" class="tree" style="--layer: 0;">
+        <img src="./images/church building.png" alt="church building" class="building" style="--layer: 2;">
+        <img src="./images/church land.png" alt="" class="land" style="--layer: 1;">
+        <img src="./images/church cross.png" alt="" class="cross" style="--layer: 3;">
+        <img src="./images/church streetlight.png" alt="" class="light" style="--layer: 4;">
+        <!--input buttons [hide their display]-->
+        <input type="radio" name="dot" id="entry1" checked>
+        <input type="radio" name="dot" id="entry2">
+        <input type="radio" name="dot" id="entry3">
+        <input type="radio" name="dot" id="entry4">
+        <input type="radio" name="dot" id="entry5">
+        <input type="radio" name="dot" id="entry6">
+        <input type="radio" name="dot" id="entry7">
+        <input type="radio" name="dot" id="entry8">
+        <!--their buttons-->
+        <label for="entry1" class="btn" id="one" style="--lineup: 1">1</label>
+        <label for="entry2" class="btn" id="two" style="--lineup: 2">2</label>
+        <label for="entry3" class="btn" id="three" style="--lineup: 3">3</label>
+        <label for="entry4" class="btn" id="four" style="--lineup: 4">4</label>
+        <label for="entry5" class="btn" id="five" style="--lineup: 5">5</label>
+        <label for="entry6" class="btn" id="six" style="--lineup: 6">6</label>
+        <label for="entry7" class="btn" id="seven" style="--lineup: 7">7</label>
+        <label for="entry8" class="btn" id="eight" style="--lineup: 8">8</label>
+        <!--entry card divs-->
+        <div class="card one" style="--rval: 4; --gval: 5; --bval: 10;"></div>
+        <div class="card two" style="--rval: 10; --gval: 2; --bval: 6;"></div>
+        <div class="card three" style="--rval: 6; --gval: 9; --bval: 2;"></div>
+        <div class="card four" style="--rval: 12; --gval: 10; --bval: 5;"></div>
+        <div class="card five" style="--rval: 2; --gval: 12; --bval: 11;"></div>
+        <div class="card six" style="--rval: 11; --gval: 12; --bval: 3;"></div>
+        <div class="card seven" style="--rval: 8; --gval: 4; --bval: 2;"></div>
+        <div class="card eight" style="--rval: 5; --gval: 10; --bval: 15;"></div>
+    </section>
 </body>
 </html>

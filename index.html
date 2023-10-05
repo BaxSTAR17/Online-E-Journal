@@ -274,6 +274,33 @@
         .mainwrap > div {
             transition: all 0.2s ease-in-out;
         }
+        .mainwrap > a {
+            height: 25px;
+            width: 70px;
+            background: transparent;
+            border: 1px solid white;
+            border-radius: 20px;
+            transition: all 0.3s ease-in-out;
+            color: white;
+            text-align: center;
+            font-size: 18px;
+            font-family: tahoma;
+            font-weight: 550;
+            position: absolute;
+            text-decoration: none;
+        }
+        .mainwrap > a:hover {
+            border-color: rgba(0, 0, 0, 0);
+            background-color: white;
+            color: black;
+            scale: 1.30;
+        }
+        .gochurch {
+            left: 10dvw;
+            top: 20dvh;
+            visibility: hidden;
+            opacity: 0;
+        }
     </style>
 </head>
 <body>
@@ -299,6 +326,7 @@
             <button class="bcommunity"><b>COMMUNITY</b></button>
             <button class="bcourt"><b>COURT</b></button>
         </div>
+        <a href="./church/index.htm" class="gochurch">GO</a>
     </div>
 </body>
 <script>
@@ -319,7 +347,7 @@
     let bbox = document.querySelector(".btnbox");
     let styler = document.head.appendChild(document.createElement("style"));
 
-    bchurch.addEventListener("click", function() {styler.innerHTML = ".bgchurch::before { opacity: 1; } .bgchurch::after { opacity: 1; } .p1 { transform: translate(40dvw, 0); } .p2 { transform: translate(-5dvw, 0); } .tbox1 { transform: translate(-2dvw, -58dvh); width: 550px; } .tbox2 { transform: translate(-3dvw, -57dvh); width: 200px; } .lbox1 { width: 200px; transform: translate(0, -23dvh); } .lbox2 { width: 200px; transform: translate(-15dvw, 6dvh); }"; bbox.textContent = "GO BACK";});
+    bchurch.addEventListener("click", function() {styler.innerHTML = ".bgchurch::before { opacity: 1; } .bgchurch::after { opacity: 1; } .p1 { transform: translate(40dvw, 0); } .p2 { transform: translate(-5dvw, 0); } .tbox1 { transform: translate(-2dvw, -58dvh); width: 550px; } .tbox2 { transform: translate(-3dvw, -57dvh); width: 200px; } .lbox1 { width: 200px; transform: translate(0, -23dvh); } .lbox2 { width: 200px; transform: translate(-15dvw, 6dvh); } .gochurch { visibility: visible; opacity: 1;}"; bbox.textContent = "GO BACK";});
     bbox.addEventListener("click", function() {styler.innerHTML = ".bgchurch::before { opacity: 0; } .bgclassroom::before { opacity: 0; } .bgcommunity::before { opacity: 0; } .bgculture::before { opacity: 0; } .bgcourt::before { opacity: 0; }"; bbox.textContent = "ABOUT";});
     bclassroom.addEventListener("click", function() {styler.innerHTML = ".bgclassroom::before { opacity: 1; } .bgclassroom::after { opacity: 1; } .p1 { transform: translate(35dvw, 54dvh); } .p2 { transform: translate(-5dvw, -52dvh); } .tbox1 { transform: translate(8dvw, -1dvh); } .tbox2 { width: 600px; transform: translate(-42dvw, -53dvh); } .lbox1 { width: 210px; transform: translate(15dvw, -30dvh); } .lbox2 { width: 210px; transform: translate(-1dvw, -1dvh);}"; bbox.textContent = "GO BACK"});
     bcommunity.addEventListener("click", function() {styler.innerHTML = ".bgcommunity::before { opacity: 1; } .bgcommunity::after { opacity: 1; } .p1 { transform: translate(-40dvw, 0); } .p2 { transform: translate(-13dvw, 0);} .tbox1 { transform: translate(-12dvw, -1dvh); width: 400px; } .tbox2 { transform: translate(-45dvw, -53dvh); width: 400px; } .lbox1 { width: 150px; transform: translate(-20dvw, -88dvh); } .lbox2 { width: 150px; transform: translate(-20dvw, -5dvh); }"; bbox.textContent = "GO BACK"});

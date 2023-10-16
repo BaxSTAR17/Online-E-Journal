@@ -170,7 +170,11 @@
             justify-content: center;
             align-items: center;
             gap: 10px;
-            box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, 
+                        rgba(0, 0, 0, 0.12) 0px -12px 30px, 
+                        rgba(0, 0, 0, 0.12) 0px 4px 6px, 
+                        rgba(0, 0, 0, 0.17) 0px 12px 13px, 
+                        rgba(0, 0, 0, 0.09) 0px -3px 5px;
             background: linear-gradient(217deg, rgba(0,217,217,.8), rgba(255,0,0,0) 70.71%),
                         linear-gradient(127deg, rgba(217,217,0,.8), rgba(0,255,0,0) 70.71%),
                         linear-gradient(336deg, rgba(217,0,217,.8), rgba(0,0,255,0) 70.71%);
@@ -290,10 +294,33 @@
             visibility: hidden;
             opacity: 0;
         }
+        .goclassroom {
+            left: 15dvw;
+            top: 65dvh;
+            visibility: hidden;
+            opacity: 0;
+        }
+        .goculture {
+            top: 85dvh;
+            visibility: hidden;
+            opacity: 0;
+        }
+        .gocommunity {
+            top: 65dvh;
+            left: 75dvw;
+            visibility: hidden;
+            opacity: 0;
+        }
+        .gocourt {
+            left: 85dvw;
+            top: 20dvh;
+            visibility: hidden;
+            opacity: 0;
+        }
     </style>
 </head>
 <body>
-    <div class="mainwrap">
+    <section class="mainwrap">
         <div class="bgchurch"></div>
         <div class="bgclassroom"></div>
         <div class="bgcommunity"></div>
@@ -315,8 +342,13 @@
             <button class="bcommunity" style="--color: darkslateblue;"><b>COMMUNITY</b></button>
             <button class="bcourt" style="--color: darkcyan;"><b>COURT</b></button>
         </div>
+        <!--anchor links-->
         <a href="./church/index.htm" class="gochurch">GO</a>
-    </div>
+        <a href="./classroom/index.htm" class="goclassroom">GO</a>
+        <a href="./culture/index.htm" class="goculture">GO</a>
+        <a href="./community/index.htm" class="gocommunity">GO</a>
+        <a href="./court/index.htm" class="gocourt">GO</a>
+    </section>
 </body>
 <script src="scripter.js"></script>
 </html>

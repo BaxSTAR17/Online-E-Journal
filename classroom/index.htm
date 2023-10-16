@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CLASSROOM</title>
+    <link rel="stylesheet" href="./styler.css">
+</head>
+<body>
+    <input type="radio" id="one">
+    <input type="radio" id="two">
+    <input type="radio" id="three">
+    <input type="radio" id="four">
+    <input type="radio" id="five">
+    <input type="radio" id="six">
+    <input type="radio" id="seven">
+    <input type="radio" id="eight">
+    <section class="mainwrap">
+        <div class="bulletinboard">
+            <label for="one" class="post pone" style="--order: 0;">
+                <hr width="90px" color="black" class="ruleone" />
+                <div class="seal">1</div>
+                <hr width="90px" color="black" class="ruletwo" />
+            </label>
+            <label for="two" class="post ptwo" style="--order: 1;">
+                <br />
+                <br />
+                <hr width="200px" color="skyblue"/>
+                <br />
+                <hr width="200px" color="pink"/>
+                <br />
+                <hr width="200px" color="skyblue"/>
+                <br />
+                <hr width="200px" color="pink"/>
+                <br />
+                <hr width="200px" color="skyblue"/>
+                <br />
+                <hr width="200px" color="pink"/>
+                <br />
+                <hr width="200px" color="skyblue"/>
+                <p class="writing">2</p>
+            </label>
+            <label for="three" class="post pthree" style="--order: 2;">
+            <br />
+            3
+            </label>
+            <label for="four" class="post pfour" style="--order: 3;">
+                <div class="leftpage"></div>
+                <div class="middlepage">4</div>
+                <div class="rightpage"></div>
+            </label>
+            <label for="five" class="post pfive" style="--order: 4;">5</label>
+            <label for="six" class="post psix" style="--order: 5;">
+                6
+            </label>
+            <label for="seven" class="post pseven" style="--order: 6;">
+                <br />
+                <div class="newspaper">7</div>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nobis voluptatibus harum adipisci labore distinctio, maxime repellat, nisi quasi deserunt officiis dolorum delectus nostrum, odit itaque
+            </label>
+            <label for="eight" class="post peight" style="--order: 7;">8</label>
+            <a href="../index.html">
+                <div class="backbtn">GO BACK</div>
+            </a>
+        </div>
+    </section>
+    <div class="poster one">
+        <button class="btn a" onclick="check1.checked = false">EXIT</button>
+    </div>
+    <div class="poster two">
+        <button class="btn b" onclick="check2.checked = false">EXIT</button>
+        <br />
+        <br />
+        <hr width="600px" color="skyblue"/>
+        <br />
+        <hr width="600px" color="pink"/>
+        <br />
+        <hr width="600px" color="skyblue"/>
+        <br />
+        <hr width="600px" color="pink"/>
+        <br />
+        <hr width="600px" color="skyblue"/>
+        <br />
+        <hr width="600px" color="pink"/>
+        <br />
+        <hr width="600px" color="skyblue"/>
+        <br />
+        <hr width="600px" color="pink"/>
+        <br />
+        <hr width="600px" color="skyblue"/>
+        <br />
+        <hr width="600px" color="pink"/>
+        <br />
+        <hr width="600px" color="skyblue"/>
+        <br />
+        <hr width="600px" color="pink"/>
+        <br />
+        <hr width="600px" color="skyblue"/>
+        <br />
+        <hr width="600px" color="pink"/>
+        <br />
+        <hr width="600px" color="skyblue"/>
+        <br />
+        <hr width="600px" color="pink"/>
+        <br />
+        <hr width="600px" color="skyblue"/>
+        <br />
+        <hr width="600px" color="pink"/>
+        <br />
+        <hr width="600px" color="skyblue"/>
+    </div>
+    <div class="poster three" onclick="check3.checked = false">
+        <button class="btn c">EXIT</button>
+    </div>
+    <div class="poster four" onclick="check4.checked = false">
+        <button class="btn d">EXIT</button>
+        <div class="leftpage pg"></div>
+        <div class="rightpage pg"></div>
+    </div>
+    <div class="poster five" onclick="check5.checked = false">
+        <button class="btn e">EXIT</button>
+    </div>
+    <div class="poster six" onclick="check6.checked = false">
+        <button class="btn f">EXIT</button>
+    </div>
+    <div class="poster seven" onclick="check7.checked = false">
+        <button class="btn g">EXIT</button>
+        <div class="newsposter"></div>
+    </div>
+    <div class="poster eight" onclick="check8.checked = false">
+        <button class="btn h">EXIT</button>
+    </div>
+</body>
+<script>
+    let check1 = document.getElementById("one");
+    let check2 = document.getElementById("two");
+    let check3 = document.getElementById("three");
+    let check4 = document.getElementById("four");
+    let check5 = document.getElementById("five");
+    let check6 = document.getElementById("six");
+    let check7 = document.getElementById("seven");
+    let check8 = document.getElementById("eight");
+    let checklistArray = [check1, check2, check3, check4, check5, check6, check7, check8];
+
+    check1.checked = false;
+</script>
+</html>

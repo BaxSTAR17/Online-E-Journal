@@ -47,6 +47,7 @@ input {
     rotate: calc(45deg * var(--order));    
     border: 1px solid black;
     box-shadow: 3px 3px 8px black;
+    transition: all 0.3s ease-in-out;
 }
 
 .labelholder {
@@ -140,6 +141,14 @@ label {
     color:white;
     top: 85dvh;
     font-size: 25px;
+}
+
+label:hover {
+    font-size: 18px;
+}
+
+.card:hover {
+    scale: 1.01;
 }
 
 .backbtn {

@@ -20,4 +20,14 @@ bclassroom.addEventListener("click", function() {styler.innerHTML = ".bgclassroo
 bcommunity.addEventListener("click", function() {styler.innerHTML = ".bgcommunity::before { opacity: 1; } .bgcommunity::after { opacity: 1; } .p1 { transform: translate(-40dvw, 0); } .p2 { transform: translate(-13dvw, 0);} .tbox1 { transform: translate(-12dvw, -1dvh); width: 400px; } .tbox2 { transform: translate(-45dvw, -53dvh); width: 400px; } .lbox1 { width: 150px; transform: translate(-20dvw, -88dvh); } .lbox2 { width: 150px; transform: translate(-20dvw, -5dvh); } .gocommunity { visibility: visible; opacity: 1;}"; bbox.textContent = "GO BACK"});
 bculture.addEventListener("click", function() {styler.innerHTML = ".bgculture::before { opacity: 1; } .bgculture::after { opacity: 1; } .p1 { transform: translate(29dvw, 54dvh); } .tbox1 { width: 650px; transform: translate(0, -60dvh); } .tbox2 { width: 300px; transform: translate(4dvw, -57dvh);} .lbox1 { width: 300px; transform: translate(-35dvw, -80dvh); } .lbox2 { width: 300px; transform: translate(-35dvw, -40dvh);} .goculture { visibility: visible; opacity: 1;}"; bbox.textContent = "GO BACK"});
 bcourt.addEventListener("click", function() {styler.innerHTML = ".bgcourt::before { opacity: 1; } .bgcourt::after { opacity: 1; } .p2 { transform: translate(27dvw, 0); } .tbox1 { width: 400px; transform: translate(-30dvw, -3dvh); } .tbox2 { width: 400px; transform: translate(-63dvw, -55dvh); } .lbox1 { width: 300px; transform: translate(20dvw, -23dvh); } .lbox2 { width: 600px; transform: translate(29dvw, 10dvh);} .gocourt { visibility: visible; opacity: 1;}"; bbox.textContent = "GO BACK"});
-bbox.addEventListener("click", function() {styler.innerHTML = ".bgchurch::before { opacity: 0; } .bgclassroom::before { opacity: 0; } .bgcommunity::before { opacity: 0; } .bgculture::before { opacity: 0; } .bgcourt::before { opacity: 0; }"; bbox.textContent = "ABOUT";});
+bbox.addEventListener("click", bboxfunc);
+
+function bboxfunc(b) {
+    if (bbox.textContent == "GO BACK") {
+        styler.innerHTML = ".bgchurch::before { opacity: 0; } .bgclassroom::before { opacity: 0; } .bgcommunity::before { opacity: 0; } .bgculture::before { opacity: 0; } .bgcourt::before { opacity: 0; }"; 
+        bbox.textContent = "ABOUT";
+    }
+    else if (bbox.textContent == "ABOUT") {
+        window.location.href = "./about/index.htm";
+    }
+}

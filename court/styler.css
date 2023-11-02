@@ -1,0 +1,185 @@
+/*
+? box-shadow: 6px 6px 6px white, -6px -6px 6px white, -6px 6px 6px white, 6px -6px 6px white;
+*/
+
+body {
+    margin: 0;
+    overflow: hidden;
+}
+
+.mainwrap {
+    height: 100dvh;
+    width: 100dvw;
+    background-color: skyblue;
+}
+
+.absolute {
+    position: absolute;
+}
+
+.field {
+    height: 200dvh;
+    width: 200dvw;
+    background: linear-gradient(transparent, var(--color), transparent);
+    transform-origin: center bottom;
+    rotate: 180deg;
+    transition: all 0.9s ease-in-out;
+    border-radius: 50dvw;
+    left: -50dvw;
+}
+
+input {
+    display: none;
+}
+
+label {
+    border: 1px dashed black;
+    height: 25px;
+    width: 25px;
+    border-radius: 25px;
+    background-color: var(--color);
+    color: white;
+    font-family: tahoma;
+    text-align: center;
+    font-size: 18px;
+    transition: all 0.2s ease-in-out;
+    font-weight: bold;
+}
+
+label:hover {
+    cursor: pointer;
+    scale: 1.2;
+    margin-left: 2px;
+    margin-right: 2px;
+}
+
+.labelholder {
+    align-self: center;
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+    top: 4dvh;
+    left: 42dvw;
+}
+
+#one:checked ~ .labelholder .one {
+    transform: translateY(3dvh);
+}
+
+#two:checked ~ .labelholder .two {
+    transform: translateY(3dvh);
+}
+
+#three:checked ~ .labelholder .three {
+    transform: translateY(3dvh);
+}
+
+#four:checked ~ .labelholder .four {
+    transform: translateY(3dvh);
+}
+
+#five:checked ~ .labelholder .five {
+    transform: translateY(3dvh);
+}
+
+#six:checked ~ .labelholder .six {
+    transform: translateY(3dvh);
+}
+
+#seven:checked ~ .labelholder .seven {
+    transform: translateY(3dvh);
+}
+
+#eight:checked ~ .labelholder .eight {
+    transform: translateY(3dvh);
+}
+
+#one:checked ~ .a {
+    rotate: 0deg;
+}
+
+#two:checked ~ .b {
+    rotate: 0deg;
+}
+
+#three:checked ~ .c {
+    rotate: 0deg;
+}
+
+#four:checked ~ .d {
+    rotate: 0deg;
+}
+
+#five:checked ~ .e {
+    rotate: 0deg;
+}
+
+#six:checked ~ .f {
+    rotate: 0deg;
+}
+
+#seven:checked ~ .g {
+    rotate: 0deg;
+}
+
+#eight:checked ~ .h {
+    rotate: 0deg;
+}
+
+#one:checked ~ .b, .c, .d, .e, .f, .g, .h {
+    rotate: -180deg;
+}
+
+#two:checked ~ .a, .c, .d, .e, .f, .g, .h {
+    rotate: 180deg;
+}
+
+#three:checked ~ .a, .b, .d, .e, .f, .g, .h {
+    rotate: -180deg;
+}
+
+#four:checked ~ .a, .b, .c, .e, .f, .g, .h {
+    rotate: 180deg;
+}
+
+#five:checked ~ .a, .b, .c, .d, .f, .g, .h {
+    rotate: -180deg;
+}
+
+#six:checked ~ .a, .b, .c, .d, .e, .g, .h {
+    rotate: 180deg;;
+}
+
+#seven:checked ~ .a, .b, .c, .d, .e, .f, .h {
+    rotate: -180deg;
+}
+
+#eight:checked ~ .a, .b, .c, .d, .e, .f, .g {
+    rotate: 180deg;
+}
+
+.backbtn {
+    top: 5dvh;
+    left: 90dvw;
+    height: 25px;
+    width: 90px;
+    border: 2px solid white;
+    background: linear-gradient(217deg, rgba(7, 85, 85, 0.8), rgba(255,0,0,0) 70.71%),
+                linear-gradient(127deg, rgba(99, 99, 18, 0.8), rgba(0,255,0,0) 70.71%),
+                linear-gradient(336deg, rgba(120, 14, 120, 0.8), rgba(0,0,255,0) 70.71%);
+    border-radius: 25px;
+    color: white;
+    text-align: center;
+    font-size: 18px;
+    font-family: tahoma;
+    font-weight: 550;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+    position: absolute;
+}
+
+.backbtn:hover {
+    scale: 1.54;
+    border-color: yellow;
+    color: yellow;
+}

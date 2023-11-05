@@ -1,0 +1,12 @@
+.bgchurch { background-image: url("../assets/images/church.gif");
+    background-size: cover; width: 100dvw; height: 100dvh; z-index: -1;}
+.bgchurch::before { opacity: 1; } 
+.bgchurch::after { opacity: 1; } 
+.p1 { transform: translate(40dvw, 0); } 
+.p2 { transform: translate(-5dvw, 0); } 
+.tbox1 { transform: translate(-2dvw, -58dvh); width: 550px; } 
+.tbox2 { transform: translate(-3dvw, -57dvh); width: 200px; } 
+.lbox1 { width: 200px; transform: translate(0, -23dvh); } 
+.lbox2 { width: 200px; transform: translate(-15dvw, 6dvh); } 
+.bchurch { background-color: white; }
+.gochurch { visibility: visible; opacity: 1;}

@@ -103,6 +103,9 @@ body {
     border: 2px solid var(--color);
     transition: all 0.3s ease-in-out;
     background-color: white;
+    background-image: var(--img);
+    background-size: cover;
+    background-position: center;
 }
 
 .mov:hover {

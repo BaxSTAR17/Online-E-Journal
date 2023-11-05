@@ -11,9 +11,8 @@ body {
     background: linear-gradient(70deg, red, transparent), 
                 linear-gradient(130deg, blue, transparent),
                 linear-gradient(200deg, green, transparent),
-                linear-gradient(360deg, purple, transparent),
-                linear-gradient(180deg, pink, transparent),
-                linear-gradient(90deg, aquamarine, transparent);
+                linear-gradient(360deg, teal, transparent),
+                linear-gradient(180deg, aquamarine, transparent);
     width: 100dvw;
     height: 100dvh;
     display: flex;
@@ -30,10 +29,22 @@ input {
     height: 240dvh;
     /* border: 2px solid black; */
     top: 20dvh;
+    animation: rotateUp 0.9s ease-in-out;
     display: flex;
     justify-content: center;
     transform-origin: calc(95dvw / 2) calc(240dvh / 2);
     transition: all 1s ease-in-out;
+}
+
+@keyframes rotateUp {
+    from {
+        top: 100dvh;
+        rotate: 90deg;
+    }
+    to {
+        top: 20dvh;
+        rotate: 0deg;
+    }
 }
 
 .card {
@@ -139,6 +150,7 @@ label {
     font-family: tahoma;
     font-weight: bolder;
     color:white;
+    -webkit-text-stroke: 2px black;
     top: 85dvh;
     font-size: 25px;
 }

@@ -1,0 +1,31 @@
+.bgculture { background-image: url("../assets/images/culture.gif");
+  background-size: cover; width: 100dvw; height: 100dvh; z-index: -1;}
+.bgculture::before {
+  opacity: 1;
+}
+.bgculture::after {
+  opacity: 1;
+}
+.p1 {
+  transform: translate(29dvw, 54dvh);
+}
+.tbox1 {
+  width: 650px;
+  transform: translate(0, -60dvh);
+}
+.tbox2 {
+  width: 300px;
+  transform: translate(4dvw, -57dvh);
+}
+.lbox1 {
+  width: 300px;
+  transform: translate(-35dvw, -80dvh);
+}
+.lbox2 {
+  width: 300px;
+  transform: translate(-35dvw, -40dvh);
+}
+.goculture {
+  visibility: visible;
+  opacity: 1;
+}

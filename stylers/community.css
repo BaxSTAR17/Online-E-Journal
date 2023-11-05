@@ -1,0 +1,34 @@
+.bgcommunity { background-image: url("../assets/images/community.gif");
+  background-size: cover; width: 100dvw; height: 100dvh; z-index: -1;}
+.bgcommunity::before {
+  opacity: 1;
+}
+.bgcommunity::after {
+  opacity: 1;
+}
+.p1 {
+  transform: translate(-40dvw, 0);
+}
+.p2 {
+  transform: translate(-13dvw, 0);
+}
+.tbox1 {
+  transform: translate(-12dvw, -1dvh);
+  width: 400px;
+}
+.tbox2 {
+  transform: translate(-45dvw, -53dvh);
+  width: 400px;
+}
+.lbox1 {
+  width: 150px;
+  transform: translate(-20dvw, -88dvh);
+}
+.lbox2 {
+  width: 150px;
+  transform: translate(-20dvw, -5dvh);
+}
+.gocommunity {
+  visibility: visible;
+  opacity: 1;
+}

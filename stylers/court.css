@@ -1,0 +1,31 @@
+.bgcourt { background-image: url("../assets/images/court.gif");
+  background-size: cover; width: 100dvw; height: 100dvh; z-index: -1;}
+.bgcourt::before {
+  opacity: 1;
+}
+.bgcourt::after {
+  opacity: 1;
+}
+.p2 {
+  transform: translate(27dvw, 0);
+}
+.tbox1 {
+  width: 400px;
+  transform: translate(-30dvw, -3dvh);
+}
+.tbox2 {
+  width: 400px;
+  transform: translate(-63dvw, -55dvh);
+}
+.lbox1 {
+  width: 350px;
+  transform: translate(20dvw, -23dvh);
+}
+.lbox2 {
+  width: 600px;
+  transform: translate(29dvw, 10dvh);
+}
+.gocourt {
+  visibility: visible;
+  opacity: 1;
+}

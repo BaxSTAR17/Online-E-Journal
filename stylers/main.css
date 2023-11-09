@@ -18,6 +18,14 @@ body {
     justify-content: center;
 }
 
+/* .mainwrap::before {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    content: "";
+
+} */
+
 .bgchurch::before {
     position: absolute;
     content: "";
@@ -59,6 +67,7 @@ body {
     transition: opacity 0.3s linear;
     opacity: 0;
 }
+
 .bgclassroom::after {
     position: absolute;
     content: "CLASSROOM";
@@ -86,6 +95,7 @@ body {
     transition: opacity 0.3s linear;
     opacity: 0;
 }
+
 .bgcommunity::after {
     position: absolute;
     content: "COMMUNITY";
@@ -113,6 +123,7 @@ body {
     transition: opacity 0.3s linear;
     opacity: 0;
 }
+
 .bgculture::after {
     position: absolute;
     content: "CULTURE";
@@ -140,6 +151,7 @@ body {
     transition: opacity 0.3s linear;
     opacity: 0;
 }
+
 .bgcourt::after {
     position: absolute;
     content: "COURT";
@@ -152,6 +164,7 @@ body {
     opacity: 0;
     transition: opacity 0.2s linear;
 }
+
 .btnwrap {
     position: absolute;
     border: 1px solid white;
@@ -171,6 +184,18 @@ body {
     background: linear-gradient(217deg, rgba(0,217,217,.8), rgba(255,0,0,0) 70.71%),
                 linear-gradient(127deg, rgba(217,217,0,.8), rgba(0,255,0,0) 70.71%),
                 linear-gradient(336deg, rgba(217,0,217,.8), rgba(0,0,255,0) 70.71%);
+    animation: mold 17s linear infinite;
+}
+@keyframes mold {
+    0% {
+        background-position: 0 0;
+    }
+    50% {
+        background-position: 200% 0;
+    }
+    100% {
+        background-position: 0 0;
+    }
 }
 .btnwrap > button {
     height: 50px;

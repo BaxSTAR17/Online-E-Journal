@@ -2,7 +2,7 @@
     background-size: cover; width: 100dvw; height: 100dvh; z-index: -1;}
 .bgchurch::before { opacity: 1; } 
 .bgchurch::after { opacity: 1; } 
-.p1 { transform: translate(40dvw, 0); } 
+.p1 { transform: translate(40dvw, 0); background-image: url(../assets/images/su.png) } 
 .p2 { transform: translate(-5dvw, 0); } 
 .tbox1 { transform: translate(-2dvw, -58dvh); width: 550px; } 
 .tbox2 { transform: translate(-3dvw, -57dvh); width: 200px; } 
@@ -10,3 +10,15 @@
 .lbox2 { width: 200px; transform: translate(-15dvw, 6dvh); } 
 .bchurch { background-color: white; }
 .gochurch { visibility: visible; opacity: 1;}
+button.bchurch { 
+    background-color: lightgray;
+    color: var(--color);
+    scale: 0.9;
+}
+button.bchurch:hover {
+    scale: 1.1;
+    background-color: white;
+    border-color: gray;
+    border-width: 3px;
+    color: var(--color);
+}

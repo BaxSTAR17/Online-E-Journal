@@ -15,38 +15,48 @@ let bchurch = document.querySelector(".bchurch"),
     bbox = document.querySelector(".btnbox"),
     linkStyle = document.getElementById('linkstyle'),
     styler = document.head.appendChild(document.createElement("style"));
-    // bgMusic = new Audio("./assets/music/church.ogg");
+    bgMusic = new Audio("./assets/music/church.ogg");
 
-// bgMusic.addEventListener("ended", repeatBg);
-// bgMusic.volume = 0.1;
+bgMusic.addEventListener("ended", repeatBg);
+bgMusic.volume = 0.1;
 
-// function repeatBg(e) {
-//     e.target.currentTime = 0;
-//     e.target.play();
-// }
+// document.addEventListener("load", () => 
+//     setTimeout(function(){
+//         document.getElementById("preloader").style.opacity = 0;
+//         // document.getElementById("preloader").style.display = "none";
+//         // document.getElementById("preloader").style.visibility = "hidden";
+//         document.getElementById("preloader").style.zIndex = -3;
+//         document.removeEventListener("load", setTimeout(deload, 2000));
+//     }, 2000)
+// );
 
-// function playBg(n) {
-//     bgMusic.pause();
-    // switch(n) {
-    //     case 1:
-    //         bgMusic = new Audio("./assets/music/church.ogg");
-    //         break;
-    //     case 2:
-    //         bgMusic = new Audio("./assets/music/classroom.ogg");
-    //         break;
-    //     case 3:
-    //         bgMusic = new Audio("./assets/music/culture.ogg");
-    //         break;
-    //     case 4:
-    //         bgMusic = new Audio("./assets/music/community.ogg");
-    //         break;
-    //     case 5:
-    //         bgMusic = new Audio("./assets/music/court.ogg");
-    //         break;
-    // }
-//     bgMusic.play();
-//     bgMusic.volume = 0.08;
-// }
+function repeatBg(e) {
+    e.target.currentTime = 0;
+    e.target.play();
+}
+
+function playBg(n) {
+    bgMusic.pause();
+    switch(n) {
+        case 1:
+            bgMusic = new Audio("./assets/music/church.ogg");
+            break;
+        case 2:
+            bgMusic = new Audio("./assets/music/classroom.ogg");
+            break;
+        case 3:
+            bgMusic = new Audio("./assets/music/culture.ogg");
+            break;
+        case 4:
+            bgMusic = new Audio("./assets/music/community.ogg");
+            break;
+        case 5:
+            bgMusic = new Audio("./assets/music/court.ogg");
+            break;
+    }
+    bgMusic.play();
+    bgMusic.volume = 0.08;
+}
 
 bchurch.addEventListener("click", function() {
     if (bbox.textContent == "GO☨BACK") {
@@ -54,6 +64,7 @@ bchurch.addEventListener("click", function() {
     }
     else {
         linkStyle.href = "./stylers/church.css"; 
+        bchurch.classList.add("selected");
         bbox.textContent = "GO☨BACK";
         lbox1.textContent = "Points in total: ";
         lbox2.textContent = "Entries in total: ";

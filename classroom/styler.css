@@ -271,12 +271,14 @@ body {
 }
 
 .five {
+    top: 130dvh;
     background-color: skyblue;
     border: 15px solid white;
     border-radius: 480px;
     width: 480px;
     height: 480px;
     --half: calc(480px / 2);
+    scale: 1.4;
 }
 
 .six {
@@ -368,7 +370,7 @@ input {
 }
 
 #five:checked ~ .five {
-    transform: translateY(-90dvh);
+    transform: translateY(-80dvh);
 }
 
 #six:checked ~ .six {

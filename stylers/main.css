@@ -18,13 +18,19 @@ body {
     justify-content: center;
 }
 
-/* .mainwrap::before {
+.mainwrap::before {
     position: absolute;
     width: 100vw;
     height: 100vh;
     content: "";
-
-} */
+    background: linear-gradient(217deg, rgb(45, 242, 219), rgba(255,0,0,0) 70.71%),
+                linear-gradient(127deg, rgb(70, 96, 144), rgba(0,255,0,0) 70.71%),
+                linear-gradient(336deg, rgb(6, 114, 124), rgba(0,0,255,0) 70.71%);
+    transition: all 0.5s ease-in-out;
+    opacity: 0;
+    z-index: -1;
+    animation: mold 15s linear infinite;
+}
 
 .bgchurch::before {
     position: absolute;
@@ -169,8 +175,8 @@ body {
     position: absolute;
     border: 1px solid white;
     border-radius: 30px;
-    width: 600px;
-    height: 100px;
+    width: clamp(300px, 600px, 900px)/*600px*/;
+    height: clamp(50px, 100px, 150px);
     align-self: center;
     display: flex;
     justify-content: center;
@@ -184,22 +190,10 @@ body {
     background: linear-gradient(217deg, rgba(0,217,217,.8), rgba(255,0,0,0) 70.71%),
                 linear-gradient(127deg, rgba(217,217,0,.8), rgba(0,255,0,0) 70.71%),
                 linear-gradient(336deg, rgba(217,0,217,.8), rgba(0,0,255,0) 70.71%);
-    animation: mold 17s linear infinite;
-}
-@keyframes mold {
-    0% {
-        background-position: 0 0;
-    }
-    50% {
-        background-position: 200% 0;
-    }
-    100% {
-        background-position: 0 0;
-    }
 }
 .btnwrap > button {
-    height: 50px;
-    width: 100px;
+    height: clamp(25px, 50px, 75px);
+    width: clamp(50px, 100px, 150px);
     background: transparent;
     border: 1px solid white;
     border-radius: 20px;
@@ -217,9 +211,13 @@ body {
     height: 32vh;
     width: 15vw;
     border-radius: 20px;
-    border: 2px solid white;
-    top: 5dvh;
+    /* border: 2px solid white; */
+    top: clamp(1dvh, 5dvh, 25dvh);
+    background-image: url(../assets/images/My\ WPE\ ONline\ \(1\)\ \(1\).png);
+    background-size: 100%;
+    background-repeat: no-repeat;
 }
+
 .p2 {
     position: absolute;
     height: 32vh;
@@ -282,6 +280,38 @@ body {
     font-family: tahoma;
     font-weight: 550;
 }
+.btnwrap::before {
+    content: "";
+    position: absolute;
+    border: 1px solid white;
+    border-radius: 30px;
+    width: 600px;
+    height: 100px;
+    align-items: center;
+    gap: 10px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, 
+                rgba(0, 0, 0, 0.12) 0px -12px 30px, 
+                rgba(0, 0, 0, 0.12) 0px 4px 6px, 
+                rgba(0, 0, 0, 0.17) 0px 12px 13px, 
+                rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    background: linear-gradient(336deg, rgba(217,217,0,1), rgba(0,0,255,0) 70.71%), 
+                linear-gradient(127deg, rgba(0, 217,217,1), rgba(0,255,0,0) 70.71%),
+                linear-gradient(217deg, rgba(217,0, 217,1), rgba(255,0,0,0) 70.71%);
+    opacity: 0;
+    z-index: -2;
+    animation: mold 8s linear infinite;
+}
+@keyframes mold {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
 .btnbox:hover {
     border-color: rgb(47, 10, 110);
     background-color: white;
@@ -293,15 +323,15 @@ body {
     transition: all 0.2s ease-in-out;
 }
 .mainwrap > a {
-    height: 25px;
-    width: 70px;
+    height: 50px;
+    width: 150px;
     background: transparent;
-    border: 1px solid white;
+    border: 4px solid white;
     border-radius: 20px;
     transition: all 0.3s ease-in-out;
     color: white;
     text-align: center;
-    font-size: 18px;
+    font-size: 40px;
     font-family: tahoma;
     font-weight: 550;
     position: absolute;
@@ -341,4 +371,33 @@ body {
     top: 20dvh;
     visibility: hidden;
     opacity: 0;
+}
+#preloader {
+    margin: 0;
+    top: 0;
+    width: 100dvw;
+    height: 100dvh;
+    position: fixed;
+    background-color: rgb(251, 100, 193);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    opacity: 0;
+    animation: deload 4s forwards;
+}
+
+@keyframes deload {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 1;
+    }
+    89% {
+        opacity: 0;
+    }
+    100% {
+        z-index: -3;
+    }
 }

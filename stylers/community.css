@@ -8,9 +8,11 @@
 }
 .p1 {
   transform: translate(-40dvw, 0);
+  background-image: url(../assets/images/community1.jpg)
 }
 .p2 {
   transform: translate(-13dvw, 0);
+  background-image: url(../assets/images/community2.jpg);
 }
 .tbox1 {
   transform: translate(-12dvw, -1dvh);

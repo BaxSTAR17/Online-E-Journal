@@ -6,8 +6,12 @@
 .bgcourt::after {
   opacity: 1;
 }
+.p1 {
+  background-image: url(../assets/images/court1.jpg);
+}
 .p2 {
   transform: translate(27dvw, 0);
+  background-image: url(../assets/images/court2.jpg);
 }
 .tbox1 {
   width: 400px;

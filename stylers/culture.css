@@ -8,6 +8,10 @@
 }
 .p1 {
   transform: translate(29dvw, 54dvh);
+  background-image: url(../assets/images/culture1.jpg);
+}
+.p2 {
+  background-image: url(../assets/images/culture2.jpg);
 }
 .tbox1 {
   width: 650px;

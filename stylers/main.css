@@ -222,10 +222,13 @@ body {
     position: absolute;
     height: 32vh;
     width: 15vw;
-    border: 2px solid white;
+    /* border: 2px solid white; */
     border-radius: 20px;
     top: 60dvh;
     left: 15dvw;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-image: url(../assets/images/su.png);
 }
 .tbox1 {
     position: absolute;

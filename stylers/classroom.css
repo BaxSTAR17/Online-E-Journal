@@ -8,9 +8,11 @@
 }
 .p1 {
   transform: translate(35dvw, 54dvh);
+  background-image: url(../assets/images/classroom1.jpg);
 }
 .p2 {
   transform: translate(-5dvw, -52dvh);
+  background-image: url(../assets/images/classroom2.jpg);
 }
 .tbox1 {
   transform: translate(8dvw, -1dvh);

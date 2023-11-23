@@ -48,9 +48,11 @@ The Freshmen Treat Fellowship subtitled "All of us are saved" is a fellowship se
 
 The event exceeded my expectations as I got to enjoy the games and I got to befriend new people and got to share to them my experiences, my challenges and my opinions. The activity took me aback with its games that helped us meet brand new people and we were able to share many things like secrets, fears and past experences. Because of this, I consider the games to be the best part of the event as it makes us more closer to each other.
 
+The event's bible verse which is Euphesians 5:8 tells us that we are children of light therefore we should walk and live a path of light with no darkness. This is the main learning and insight that the event was all about and this scriptural passage can be very useful in our daily lives. It even gives us the great benefit of spreading this bible verse and placing it in our lives to influence other people and children alike.
 
+Because of this fellowship, I am able to share with more people and improve my life of light based on the bible verse.
 
 <!-- #               GALILEAN FELLOWSHIP 2023>
-
+The Galilean Fellowship Service 2023
 
 <!-- #               UCLEM CCS MIDWEEK WORSHIP>

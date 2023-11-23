@@ -16,6 +16,7 @@ body {
     opacity: 1;
     display: flex;
     justify-content: center;
+    text-shadow: 2px 2px 4px black;
 }
 
 .mainwrap::before {
@@ -318,7 +319,7 @@ body {
 .btnbox:hover {
     border-color: rgb(47, 10, 110);
     background-color: white;
-    color: rgb(47, 10, 110);
+    color: lightgoldenrodyellow;
     scale: 1.15;
     transition: all 0.2s ease-in-out;
 }
@@ -327,10 +328,10 @@ body {
 }
 .mainwrap > a {
     height: 50px;
-    width: 150px;
+    width: 70px;
     background: transparent;
     border: 4px solid white;
-    border-radius: 20px;
+    border-radius: 25px;
     transition: all 0.3s ease-in-out;
     color: white;
     text-align: center;
@@ -345,6 +346,7 @@ body {
     background-color: white;
     color: black;
     scale: 1.30;
+    width: 150px;
 }
 .gochurch {
     left: 10dvw;

@@ -53,6 +53,19 @@ The event's bible verse which is Euphesians 5:8 tells us that we are children of
 Because of this fellowship, I am able to share with more people and improve my life of light based on the bible verse.
 
 <!-- #               GALILEAN FELLOWSHIP 2023>
-The Galilean Fellowship Service 2023
+The Galilean Fellowship Service 2023 is a fellowship service held on November 21, 2023, 5:00 PM at the SU Church for the whole Silliman University. The goal of this event is to promote and empower the UCLEM's theme while connecting with other people at the event who had effort in making their banners. Our group for CHS was also able to make our banner and with them, I was able to become part of the event.
+
+The event went very well and the participants and people that made their banners shocked me as their banners were very creative and outstanding even though it was made in just 4 days or less. The creativity of these banners were truly the highlight of this event and also the free snacks. The sad part about this event is that we weren't even able to get more pictures and experience more of the event because the event was cut short due to the very heavy raining that poured over the field.
+
+The event taught us the beauty and outcome of perfect teamwork and how everybody is willing to put effort and hardwork into their banner even if it just got destroyed from the rainstorm. As these banners promote the theme of UCLEM, which is "Embracing God's GIFT(Great Incredible Favor Today), it was able to show to us the meaning and potential of its theme and topic and with this, it can even be applied in our lives. 
+
+Because of this fellowship service, I am more willing to empower and emphasize the importance of church events through my creativity just like with these banners.
 
 <!-- #               UCLEM CCS MIDWEEK WORSHIP>
+The UCLEM Midweek Worship Service is a religious mass for certain college departments during the midweek to commemorate the University Christian Life Emphasis Month. It occurred on November 22, 2023, 6:30 PM at the SU Church on a Wednesday because it is a midweek service. It is also held to gather students from different colleges to connect and unite them spiritually and so that they can see the purpose of UCLEM. Even though the event wasn't required, I still took part in the event even as a CCS student to embrace the essence of UCLEM.
+
+The worship went very well and normally like a regular mass. I felt a sense of unity and connection with my collegemates as the CCS polo shirt was worn to indicate that were from the same college. Because of this, I felt more welcome and united with my collegemates. The mass also had a speaker that was able to share to us the essence of UCLEM and our status to God himself as "children of God" and that alone is very important.
+
+As the event goes on, our speaker was able to teach us insights about how we are sinners that are saved by Jesus which grants us the title or status of being "adopted children of God". With this learning alone, we can teach and preach it to other people so that they'd know the great honor and sacrifice Jesus had to make for us to become adopted children of God.
+
+Because of this midweek worship, I am knowledgable now of the true essence and meaning of UCLEM for the people and how we can truly be "children of God".

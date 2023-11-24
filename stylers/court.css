@@ -6,19 +6,21 @@
 .bgcourt::after {
   opacity: 1;
 }
-.p1 {
-  background-image: url(../assets/images/court1.jpg);
-}
+.pic1 { opacity: 0; }
+.pic1:nth-of-type(6) { opacity: 1; }
 .p2 {
   transform: translate(27dvw, 0);
-  background-image: url(../assets/images/court2.jpg);
 }
+.pic2 { opacity: 0; }
+.pic2:nth-of-type(6) { opacity: 1; }
 .tbox1 {
+  animation-play-state: paused;
   width: 400px;
   transform: translate(-30dvw, -3dvh);
 }
 .tbox2 {
   width: 400px;
+  height: fit-content;
   transform: translate(-63dvw, -55dvh);
 }
 .lbox1 {

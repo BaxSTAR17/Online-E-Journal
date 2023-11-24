@@ -16,7 +16,8 @@ body {
     opacity: 1;
     display: flex;
     justify-content: center;
-    text-shadow: 2px 2px 4px black;
+    text-shadow: 2px 2px 2px black;
+    perspective: 10000px;
 }
 
 .mainwrap::before {
@@ -174,15 +175,15 @@ body {
 
 .btnwrap {
     position: absolute;
-    border: 1px solid white;
-    border-radius: 30px;
-    width: clamp(300px, 600px, 900px)/*600px*/;
-    height: clamp(50px, 100px, 150px);
+    border: min(calc(40dvw / 600), calc(600px / 600)) solid white;
+    border-radius: min(calc(40dvw / 20), calc(600px / 20));
+    width: min(40dvw, 600px);
+    height: min(14dvh, 100px);
     align-self: center;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    gap: min(calc(40dvw / 60), calc(600px / 60));
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, 
                 rgba(0, 0, 0, 0.12) 0px -12px 30px, 
                 rgba(0, 0, 0, 0.12) 0px 4px 6px, 
@@ -193,13 +194,14 @@ body {
                 linear-gradient(336deg, rgba(217,0,217,.8), rgba(0,0,255,0) 70.71%);
 }
 .btnwrap > button {
-    height: clamp(25px, 50px, 75px);
-    width: clamp(50px, 100px, 150px);
+    height: min(7dvh, 50px);
+    width: min(calc(40dvw / 6), calc(600px / 6));
     background: transparent;
-    border: 1px solid white;
-    border-radius: 20px;
+    border: min(calc(40dvw / 600), calc(600px / 600)) solid white;
+    border-radius: min(calc(40dvw / 30), calc(600px / 30));
     transition: all 0.3s ease-in-out;
     color: white;
+    font-size: min(calc(2dvh - 1px), 16px);
 }
 .btnwrap > button:hover {
     border-color: rgba(0, 0, 0, 0);
@@ -209,78 +211,99 @@ body {
 }
 .p1 {
     position: absolute;
-    height: 32vh;
-    width: 15vw;
+    height: min(32dvh, 300px);
+    width: min(15dvw, 300px);
     border-radius: 20px;
     /* border: 2px solid white; */
     top: clamp(1dvh, 5dvh, 25dvh);
-    background-image: url(../assets/images/My\ WPE\ ONline\ \(1\)\ \(1\).png);
-    background-size: 100%;
-    background-repeat: no-repeat;
+    overflow: hidden;
 }
 
 .p2 {
     position: absolute;
-    height: 32vh;
-    width: 15vw;
+    height: min(32dvh, 300px);
+    width: min(15dvw, 300px);
     /* border: 2px solid white; */
-    border-radius: 20px;
+    border-radius: min(calc(15dvw / 15), calc(300px / 15));
     top: 60dvh;
     left: 15dvw;
     background-size: 100%;
     background-repeat: no-repeat;
-    background-image: url(../assets/images/su.png);
+    overflow: hidden;
 }
 .tbox1 {
     position: absolute;
-    height: 24vh;
-    width: 33vw;
-    border: 2px solid white;
+    height: min(23dvh, 160px);
+    width: min(33dvw, 540px);
+    /* border: 2px solid white; */
     top: 68dvh;
+    background-color: rgba(255, 255, 255, 0.6); /* rgb(205, 203, 203, 0.6); */
+    text-shadow: 1px 1px 2px white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 7px;
+    border-radius: 7px min(calc(33dvw / 18), calc(540px / 18)) 7px min(calc(33dvw / 18), calc(540px / 18));
+    font-weight: bold;
+    font-size: min(calc(23dvh / 10), calc(160px / 10));
+    align-items: center;
+    display: flex;
+    text-align: justify;
+    flex-direction: column;
 }
 .tbox2 {
     display: flex;
     position: absolute;
-    height: 27vh;
-    width: 14vw;
-    border: 2px solid white;
+    height: min(27dvh, 200px);
+    width: min(14dvw, 200px);
+    /* border: 2px solid white; */
     top: 65dvh;
     left: 70dvw;
+    background-color: rgba(255, 255, 255, 0.6); /* rgb(205, 203, 203, 0.6); */
+    text-shadow: 1px 1px 2px white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 7px;
+    border-radius: 7px min(calc(33dvw / 18), calc(540px / 18)) 7px min(calc(33dvw / 18), calc(540px / 18));
+    font-weight: bold;
+    font-size: 13.5px;
+    align-items: center;
+    display: flex;
+    text-align: justify;
+    flex-direction: column;
 }
 .lbox1 {
     position: absolute;
-    height: 2vh;
-    width: 20vw;
+    height: min(2dvh, 15px);
+    width: min(20dvw, 300px);
     /* border: 2px solid black; */
-    top: 93dvh;
+    top: 94dvh;
     text-align: center;
     color: white;
     font-family: tahoma;
-    
+    font-size: min(calc(2dvh + 1px), 16px);
 }
 .lbox2 {
     position: absolute;
-    height: 2vh;
-    width: 28vw;
+    height: min(2dvh, 15px);
+    width: min(28dvw, 500px);
     /* border: 2px solid black; */
     top: 64dvh;
     text-align: center;
     color: white;
     font-family: tahoma;
+    font-size: min(calc(2dvh + 1px), 16px);
 }
 .btnbox {
     position: absolute;
-    height: 25px;
-    width: 130px;
-    border: 2px solid white;
+    height: min(4dvh, 25px);
+    width: min(8dvw, 130px);
+    border: min(calc(8dvw / 65), calc(130px / 65)) solid white;
     background: linear-gradient(217deg, rgba(7, 85, 85, 0.8), rgba(255,0,0,0) 70.71%),
                 linear-gradient(127deg, rgba(99, 99, 18, 0.8), rgba(0,255,0,0) 70.71%),
                 linear-gradient(336deg, rgba(120, 14, 120, 0.8), rgba(0,0,255,0) 70.71%);
     top: 57dvh;
-    border-radius: 25px;
+    border-radius: min(4dvh, 25px);
     color: white;
     text-align: center;
-    font-size: 18px;
+    font-size: min(3dvh, 18px);
     font-family: tahoma;
     font-weight: 550;
 }
@@ -288,9 +311,9 @@ body {
     content: "";
     position: absolute;
     border: 1px solid white;
-    border-radius: 30px;
-    width: 600px;
-    height: 100px;
+    border-radius: min(calc(40dvw / 20), calc(600px / 20));
+    width: min(40dvw, 600px);
+    height: min(14dvh, 100px);
     align-items: center;
     gap: 10px;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, 
@@ -345,7 +368,7 @@ body {
     border-color: rgba(0, 0, 0, 0);
     background-color: white;
     color: black;
-    scale: 1.30;
+    /* scale: 1.30; */
     width: 150px;
 }
 .gochurch {
@@ -405,4 +428,32 @@ body {
     100% {
         z-index: -3;
     }
+}
+
+.pic1 {
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transition: all 0.2s ease-in-out;
+    scale: 1.2;
+}
+
+.pic2 {
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transition: all 0.2s ease-in-out;
+    scale: 1.2;
+}
+
+.pic1:first-of-type {
+    scale: 1;
+    opacity: 1;
+}
+
+.pic2:first-of-type {
+    opacity: 1;
+    scale: 1;
 }

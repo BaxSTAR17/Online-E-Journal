@@ -8,13 +8,16 @@
 }
 .p1 {
   transform: translate(29dvw, 54dvh);
-  background-image: url(../assets/images/culture1.jpg);
 }
-.p2 {
-  background-image: url(../assets/images/culture2.jpg);
-}
+.pic1 { opacity: 0; }
+.pic1:nth-of-type(4) { opacity: 1; }
+.pic2 { opacity: 0; }
+.pic2:nth-of-type(4) { opacity: 1; }
 .tbox1 {
+  animation-play-state: paused;
   width: 650px;
+  height: fit-content;
+  font-size: 20px;
   transform: translate(0, -60dvh);
 }
 .tbox2 {
